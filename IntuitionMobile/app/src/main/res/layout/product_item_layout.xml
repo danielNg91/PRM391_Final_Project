@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/custom_product_item_layout"
+    >
+
+    <LinearLayout
+        android:layout_width="190dp"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.072"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.03">
+
+
+        <ImageView
+            android:id="@+id/productImage"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingRight="25dp"
+            android:paddingLeft="25dp"
+            tools:srcCompat="@tools:sample/avatars"
+            android:cropToPadding="true"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            />
+
+        <TextView
+            android:id="@+id/productName"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:ems="8"
+            android:paddingLeft="10dp"
+            android:text="Product Name"
+            android:textFontWeight="800"
+            android:textSize="10sp"
+            android:paddingTop="8dp"
+            android:textAlignment="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            >
+<!--            <TextView-->
+<!--                android:id="@+id/text"-->
+<!--                android:layout_width="50dp"-->
+<!--                android:layout_height="25dp"-->
+<!--                android:ems="8"-->
+<!--                android:paddingLeft="10dp"-->
+<!--                android:text="Price"-->
+<!--                android:textFontWeight="500"-->
+<!--                android:textSize="8sp"-->
+<!--                android:paddingTop="8dp"-->
+<!--                android:textAlignment="center"/>-->
+            <TextView
+                android:id="@+id/productPrice"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:ems="8"
+                android:layout_gravity="center"
+                android:paddingTop="8dp"
+                android:text=""
+                android:textAlignment="center"
+                android:textFontWeight="500"
+                android:textSize="10sp" />
+        </LinearLayout>
+        <android.widget.Button
+            android:id="@+id/btnDetail"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:ems="8"
+            android:text="Details"
+            android:textFontWeight="100"
+            android:textSize="8sp"
+            android:background="@drawable/custom_button"
+            android:layout_marginLeft="40dp"
+            android:textColor="@color/white"
+            android:layout_marginRight="40dp"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,23 @@
+1 user có thể nhiều địa chỉ
+1 địa chỉ có thế có nhiều user
+=> Mối quan hệ giữa User và Address là ( M - M )
+
+1 user có thể nhiều order
+1 order được tạo bởi 1 user
+=> Mối quan hệ giữa User và Order là ( 1 - M )
+
+1 Order có thể chứa nhiều Product
+1 Product có thể nằm trong nhiều Order 
+=> Mối quan hệ giữa Order và Product ( M - M )
+
+1 Product có thể chứa nhiều Image
+Mỗi Image nằm trong trong duy nhất 1 product
+=> Mối quan hệ giữa Product và Image( 1 - M )
+
+1 Category có thể chứa nhiều Product
+Mỗi product nằm trong duy nhất 1 Category
+=> Mối quan hệ giữa Category và Product( 1 - M )
+
+1 Order có thể có nhiều Promotion
+1 Promotion chỉ được sử dụng trong 1 Product
+=> Mối quan hệ giữa Product và Promotion ( 1 - M )
