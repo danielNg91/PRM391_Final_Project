@@ -43,8 +43,7 @@ public class AuthenticationService {
                                     public void onResponse(Call<AuthenticatedUser> call, Response<AuthenticatedUser> response) {
                                         try {
                                             if (response.body() != null
-                                                    && response.code() == 200
-                                                    && response.body().getRole().equalsIgnoreCase("user")) {
+                                                    && response.code() == 200) {
                                                 Intent intent = new Intent(context, UserHomeScreenActivity.class);
                                                 intent.putExtra("jwt", jwt);
                                                 intent.putExtra("fullname", response.body().getFullname());

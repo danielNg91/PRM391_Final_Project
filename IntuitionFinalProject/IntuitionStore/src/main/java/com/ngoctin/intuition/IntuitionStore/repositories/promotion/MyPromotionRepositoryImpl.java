@@ -25,7 +25,7 @@ public class MyPromotionRepositoryImpl implements MyPromotionRepository {
                     "FROM users u " +
                     "JOIN users_promotions up ON u.id = up.user_id " +
                     "JOIN promotions p ON up.promotion_id = p.id " +
-                    "AND up.isUsed = 'false' " +
+                    "AND up.isUsed = 'true' " +
                     "WHERE u.id = ? ";
             Query query = entityManager.createNativeQuery(sql,Promotion.class);
             query.setParameter(1,id);

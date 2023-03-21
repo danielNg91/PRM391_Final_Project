@@ -27,8 +27,10 @@ public class MyOrderRepositoryImpl implements MyOrderRepository{
     @Transactional
     public boolean createOrder(Order order) {
         try {
-            String sql = "INSERT INTO orders " +
+            String sql = "INSERT INTO orders (id, user_id, promotion_id, addr_id, order_price, created_date, receiver_address) " +
                     "VALUES(?,?,?,?,?,?,?)";
+            order.setAddressId(1);
+
             Query query = entityManager.createNativeQuery(sql,Order.class);
             query.setParameter(1,order.getId());
             query.setParameter(2,order.getUserID());
@@ -40,6 +42,9 @@ public class MyOrderRepositoryImpl implements MyOrderRepository{
             query.setParameter(5, order.getOrderPrice());
             query.setParameter(6,ApplicationUtils.getCurrentTime());
             query.setParameter(7,order.getReceriverAddress());
+
+            System.out.println(order.toString());
+
             if(query.executeUpdate() > 0){
                 return true;
             }
